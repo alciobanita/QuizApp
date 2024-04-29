@@ -10,12 +10,16 @@ body {
     align-items: center;
 }
 
-.card-title {
+.card-title{
     margin-top: 8px;
 }
-
 .quiz-card {
     width: 30rem;
+}
+
+.txt-center{
+    display: flex;
+    justify-content: center;
 }
 
 .quiz-answer-card:hover {
