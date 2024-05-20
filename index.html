@@ -29,13 +29,23 @@
         <div class="card quiz-card">
 
             <div id="endScreen" class="card-body" style="display: none;">
-                <span class="txt-center">Quiz beendet!</span>
                 <img src="./img/trophy.png" class="card-img-top">
-                <span class="txt-center">Ergebnis: Du hast &nbsp;<b id="amount-of-right-questions">X</b>&nbsp; Fragen von &nbsp;<b id="amountOfQuestions">X</b>&nbsp; richtig beantwortet.</span>
+                <div class="txt-center">
+                    <h1>Quiz beendet!</h1>
+                </div>
+
+                <div class="txt-center">Ergebnis: Du hast &nbsp;<b id="amount-of-right-questions">X</b>&nbsp; Fragen
+                    von &nbsp;<b id="amountOfQuestions">X</b>&nbsp; richtig beantwortet.</div>
             </div>
 
             <div id="questionBody" class="card-body">
+
                 <img src="./img/quiz.jpg" class="card-img-top">
+
+                <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar" id="progress-bar" style="width: 25%">25%</div>
+                </div>
 
                 <h5 id="question-text" class="card-title">Frage</h5>
 

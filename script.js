@@ -45,11 +45,17 @@ function showQuestion() {
 
   if (currentQuestion >= questions.length) {
     document.getElementById('endScreen').style = "";
-    document.getElementById('questionBody').style= "display: none";
-  
+    document.getElementById('questionBody').style = "display: none";
+
     document.getElementById('amountOfQuestions').innerHTML = questions.length;
     document.getElementById('amount-of-right-questions').innerHTML = rightQuestions;
   } else {
+
+    let percent = Math.round(currentQuestion / questions.length * 100);
+    document.getElementById('progress-bar').innerHTML = `${ percent }%`;
+    document.getElementById('progress-bar').style.width = `${ percent }%`;
+    
+
     let question = questions[currentQuestion];
 
     document.getElementById('question-text').innerHTML = question['question'];
@@ -71,7 +77,6 @@ function answer(selection) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
     rightQuestions++;
   } else {
-    console.log('Falsche Antwort!');
 
     document.getElementById(selection).parentNode.classList.add("bg-danger");
     document.getElementById(idOfRightAnswer).parentNode.classList.add("bg-success");
